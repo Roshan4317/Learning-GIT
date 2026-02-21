@@ -65,3 +65,21 @@
 // }
 
 // console.log(isRotation("abcde", "cdeab"));
+
+// *************************************************************************************************************** 
+
+// 1️⃣ Count Frequency of Each Word in a Sentence
+function countWordFrequency(sentence) {
+  const words = sentence.toLowerCase().split(" ");
+  const frequency = {};
+
+  for (let word of words) {
+    frequency[word] = (frequency[word] || 0) + 1;
+  }
+
+  return frequency;
+}
+
+console.log(
+  countWordFrequency("i love coding and i love javascript")
+);
