@@ -40,7 +40,6 @@
 
 // console.log(indexOfSubstr("abcde", "cd"));
 
-
 // ***************************************************************************************************************
 
 // Check if One String is Rotation of Another
@@ -66,20 +65,38 @@
 
 // console.log(isRotation("abcde", "cdeab"));
 
-// *************************************************************************************************************** 
+// ***************************************************************************************************************
 
 // 1️⃣ Count Frequency of Each Word in a Sentence
-function countWordFrequency(sentence) {
-  const words = sentence.toLowerCase().split(" ");
-  const frequency = {};
+// function countWordFrequency(sentence) {
+//   const words = sentence.toLowerCase().split(" ");
+//   const frequency = {};
 
-  for (let word of words) {
-    frequency[word] = (frequency[word] || 0) + 1;
-  }
+//   for (let word of words) {
+//     frequency[word] = (frequency[word] || 0) + 1;
+//   }
 
-  return frequency;
-}
+//   return frequency;
+// }
 
-console.log(
-  countWordFrequency("i love coding and i love javascript")
-);
+// console.log(
+//   countWordFrequency("i love coding and i love javascript")
+// );
+
+// ***************************************************************************************************************
+
+// 2️⃣ Check If a String Is a Pangram
+
+// function isPangram(sentence) {
+//   const letters = new Set();
+
+//   for (let char of sentence.toLowerCase()) {
+//     if (char >= "a" && char <= "z") {
+//       letters.add(char);
+//     }
+//   }
+
+//   return letters.size === 26;
+// }
+
+// console.log(isPangram("The quick brown fox jumps over the lazy dog"));
