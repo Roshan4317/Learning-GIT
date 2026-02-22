@@ -100,3 +100,26 @@
 // }
 
 // console.log(isPangram("The quick brown fox jumps over the lazy dog"));
+
+// ***************************************************************************************************************
+
+//  Find the Longest Substring Without Repeating Characters (Sliding Window)
+function longestUniqueSubstring(s) {
+  const map = {};
+  let left = 0,
+    maxLen = 0,
+    start = 0;
+
+  for (let right = 0; right < s.length; right++) {
+    if (map[s[right]] >= left) left = map[s[right]] + 1;
+    map[s[right]] = right;
+    if (right - left + 1 > maxLen) {
+      maxLen = right - left + 1;
+      start = left;
+    }
+  }
+
+  return s.substring(start, start + maxLen);
+}
+
+console.log(longestUniqueSubstring("abcabcbb"));
